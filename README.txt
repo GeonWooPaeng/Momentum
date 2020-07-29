@@ -30,7 +30,7 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 * javascript dom event mdn => js의 이벤트를 알고 싶을 경우 찾기
 
 
-*// querySelector 은 element의 자식을 탐색한다(첫번째 것)
+*// querySelector 은 html에서 필요한 것을 얻는다.(element의 자식을 탐색한다(첫번째 것))
 
 *querySelector all은 모든 걸을 가져온다(array)
 
@@ -42,3 +42,7 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *local storage - 작은 정보를 저장하는 곳
 
 *${} - {}안에 넣어주는 것을 할때 작은 따옴표가 아니라 ~표시이다
+
+*document.createElement("button") - 지정한 tagname -> button의 html요소를 만들어 반환한다.
+
+*appendChild - 뭔가를 그의 father element안에 넣는 것이다.
