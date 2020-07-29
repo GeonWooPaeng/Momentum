@@ -40,3 +40,5 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *get element by tag name은 태그로 element를 가져오는 것이다(input, body, html, div, section)
 
 *local storage - 작은 정보를 저장하는 곳
+
+*${} - {}안에 넣어주는 것을 할때 작은 따옴표가 아니라 ~표시이다
