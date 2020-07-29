@@ -46,3 +46,8 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *document.createElement("button") - 지정한 tagname -> button의 html요소를 만들어 반환한다.
 
 *appendChild - 뭔가를 그의 father element안에 넣는 것이다.
+
+*localStorage에는 js의 data를 저장할 수 없다.(오직 string만 저장가능하다.)
+=> js는 localStorage에 있는 모든 데이터를 string으로 저장하려 한다.
+
+*JSON.stringify - 모든 js object를 string으로 바꿔준다
