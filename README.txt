@@ -63,3 +63,14 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *Math.floor(소수) - 소수부분 버리고 정부만 추출해준다.
 
 * css 에서 z-index:-1;은 맨 뒤로 보낸다.
+
+
+### Api 데이터 얻는 방법 ###
+*API(Application Programming Interface) - 다른 서버로부터 손쉽게 데이터를 가져올 수 있는 수단./ 특정 웹사이트로부터 데이터를 얻거나 컴퓨터끼리 소통하기 위해 고안된 것이다.
+
+*  fetch(`api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}`) // 사이트 api call을 가져온 뒤 앞에 https://를 넣어준다. -> 데이터를 얻을 수 있다.
+
+* fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_KEY}&units=metric`); 
+인터넷에서 parameters을 보고 celsius단위를 쓰러면 units=metric을 쓰면 된다.
+
+*.then() - then은 함수를 호출하는 역할(데이터가 완전히 들어온 다음 호출하는 것)
