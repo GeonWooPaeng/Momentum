@@ -1,3 +1,10 @@
+
+# Momentum
+
+## USE
+- vanilla js, html, css 
+
+## To understand
 *javascript에는 ECMAScript(Specification의 명칭)이 있다.
 => Specification(설명문)에 대한 업데이트(ES5 == ECMAScript5)
 
