@@ -57,3 +57,5 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *forEach - 기본적으로 함수를 실행하는데 array에 담겨있는 것들 각각에 한번씩 함수를 실행시켜주는 것
 
 *filter은 array의 모든 아이템을 통해 함수를 실행하고 true인 아이템들만 가지고 새로운 array를 만든다.
+
+*parseInt() - 괄호안을 int형으로 바꾸기

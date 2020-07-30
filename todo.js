@@ -4,17 +4,18 @@ toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = 'toDos';
 
-const toDos = []; // 할일 저장 공간
+let toDos = []; // 할일 저장 공간
 
-function filterFn(toDo){
-  return toDo.id == 1
-}
 
 function deleteToDo(event){
   const btn = event.target;
   const li = btn.parentNode; //버튼 누른 id를 알려준다.
   toDoList.removeChild(li); //li의 하위 노드를 제거하고 제거된 노드를 return한다.
-  const cleanToDos = toDos.filter(filterFn); //각각의 item과 같이 실행된다.
+  const cleanToDos = toDos.filter(function(toDo){
+    return toDo.id !== parseInt(li.id);
+  }); //각각의 item과 같이 실행된다.
+  toDos = cleanToDos;
+  saveToDos();
 }
 
 function saveToDos(){
@@ -33,10 +34,11 @@ function paintToDo(text){
   delBtn.addEventListener("click",deleteToDo); // delete button click 이벤트
   span.innerText = text
 
-  li.id = newId; // li에 순서를 넣어주기
 // span과 delete button을 li안에 append한다.
   li.appendChild(span);//뭔가를 그의 father element안에 넣는 것이다. span을 li안에 넣고
   li.appendChild(delBtn); //버튼을 li안에 넣는다.
+
+  li.id = newId; // li에 순서를 넣어주기
   
   // li를 ul에다 append한다.
   toDoList.appendChild(li); // toDoList에 li를 넣는다.
