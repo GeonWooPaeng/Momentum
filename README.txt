@@ -50,4 +50,10 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *localStorage에는 js의 data를 저장할 수 없다.(오직 string만 저장가능하다.)
 => js는 localStorage에 있는 모든 데이터를 string으로 저장하려 한다.
 
+* JSON - javaScript Object Notation, 데이터를 전달할 때, 자바스크립트가 그걸 다룰수 있도록 object로 바꿔주는 기능
+
 *JSON.stringify - 모든 js object를 string으로 바꿔준다
+
+*forEach - 기본적으로 함수를 실행하는데 array에 담겨있는 것들 각각에 한번씩 함수를 실행시켜주는 것
+
+*filter은 array의 모든 아이템을 통해 함수를 실행하고 true인 아이템들만 가지고 새로운 array를 만든다.

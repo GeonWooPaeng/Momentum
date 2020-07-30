@@ -6,6 +6,17 @@ const TODOS_LS = 'toDos';
 
 const toDos = []; // 할일 저장 공간
 
+function filterFn(toDo){
+  return toDo.id == 1
+}
+
+function deleteToDo(event){
+  const btn = event.target;
+  const li = btn.parentNode; //버튼 누른 id를 알려준다.
+  toDoList.removeChild(li); //li의 하위 노드를 제거하고 제거된 노드를 return한다.
+  const cleanToDos = toDos.filter(filterFn); //각각의 item과 같이 실행된다.
+}
+
 function saveToDos(){
   // toDos를 가져와서 localStorage에 저장하는 function
   localStorage.setItem(TODOS_LS, JSON.stringify(toDos)); //JSON.stringify은 모든 js object를 string으로 바꿔준다.
@@ -19,6 +30,7 @@ function paintToDo(text){
   const newId = toDos.length+1; //순서 만들기
 
   delBtn.innerText = "✖";
+  delBtn.addEventListener("click",deleteToDo); // delete button click 이벤트
   span.innerText = text
 
   li.id = newId; // li에 순서를 넣어주기
@@ -49,8 +61,11 @@ function handleSubmit(event){
 function loadToDos(){
   const loadedToDos = localStorage.getItem(TODOS_LS);
   if(loadedToDos !== null){
-    //toDos를 불러오는 작업다루기
-
+    const parsedToDos = JSON.parse(loadedToDos);// 가져온 것을 js object로 변환해준다.
+    //밑에 괄호안의 함수를 parsedToDos에 있는 것들 각각에 대해 실행해줄 것이다.
+    parsedToDos.forEach(function(toDo){
+      paintToDo(toDo.text);//parsedToDos를 화면에 보여주기
+    });
   }
 }
 
