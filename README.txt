@@ -59,3 +59,7 @@ https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-us
 *filter은 array의 모든 아이템을 통해 함수를 실행하고 true인 아이템들만 가지고 새로운 array를 만든다.
 
 *parseInt() - 괄호안을 int형으로 바꾸기
+
+*Math.floor(소수) - 소수부분 버리고 정부만 추출해준다.
+
+* css 에서 z-index:-1;은 맨 뒤로 보낸다.
